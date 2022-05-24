@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    container_name: apitoken
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes: 
+      - ./:/app/
+      - /app/node_modules/
+    ports: 
+    - 3000:3000    
+    stdin_open: true
+    tty: true 
